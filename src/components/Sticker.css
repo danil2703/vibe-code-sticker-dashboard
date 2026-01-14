@@ -1,0 +1,112 @@
+.sticker {
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: move;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+.sticker:hover {
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.sticker.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+}
+
+.sticker-header {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+.sticker-header:active {
+  cursor: grabbing;
+}
+
+.sticker-handle {
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker-content {
+  flex: 1;
+  padding: 8px;
+  overflow: auto;
+  position: relative;
+}
+
+.sticker-text {
+  min-height: 100%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: text;
+}
+
+.sticker-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+}
+
+.sticker-textarea {
+  color: #333;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+}
+
+.sticker-delete-button {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #e74c3c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.sticker-delete-button:hover {
+  background: #e74c3c;
+  color: white;
+  transform: scale(1.1);
+}
+
+.sticker-delete-button:active {
+  transform: scale(0.95);
+}
+
+.sticker-delete-button svg {
+  width: 14px;
+  height: 14px;
+}

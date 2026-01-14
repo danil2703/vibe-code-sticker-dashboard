@@ -1,5 +1,7 @@
 # Sticker Dashboard
 
+https://danil2703.github.io/vibe-code-sticker-dashboard/
+
 A modern React application for managing stickers on dashboards with drag-and-drop functionality, text editing, and deletion capabilities.
 
 ## Features
